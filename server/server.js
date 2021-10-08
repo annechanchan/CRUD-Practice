@@ -4,8 +4,8 @@ const cookieParser = require('cookie-parser'); //need npm install cookei-parser
 const path = require('path'); //built in library (no install required)
 
 // require routers
-const loginRouter = require('./routes/loginRouter');
-const apiRouter = require('./routes/apiRouter');
+// const loginRouter = require('./routes/loginRouter');
+// const apiRouter = require('./routes/apiRouter');
 
 // initialize express server and declare a port for the server
 const app = express();
@@ -14,14 +14,14 @@ const PORT = 3000;
 // insert global parsers
 app.use(express.json()); // recognize incoming Request Object as JSON object
 app.use(express.urlencoded({ extended: true })); // recognize incoming Request Object as strings & arrays
-app.use(cookieParser());
+// app.use(cookieParser());
 
 // serve static files
 app.use(express.static('../client/'));
 
 // direct to routers
-app.use('/', loginRouter);
-app.use('/api', apiRouter);
+// app.use('/', loginRouter);
+// app.use('/api', apiRouter);
 
 // global 404 catch for bad route requests
 app.use((req, res) => {

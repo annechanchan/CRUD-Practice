@@ -1,4 +1,4 @@
-const { Pool } = require('pg');
+const { Pool } = require('pg'); //need to npm install pg
 
 //URL from Elephant SQL
 const PG_URI = 'postgres://ttvqqiun:y4t-aYUkcf5yKzAYNPWa1q05nKG-yLEo@kashin.db.elephantsql.com/ttvqqiun';
