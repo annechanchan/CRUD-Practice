@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser'); //need npm install cookei-parser
 const path = require('path'); //built in library (no install required)
 
 // require routers
-// const loginRouter = require('./routes/loginRouter');
+const loginRouter = require('./routes/loginRouter');
 // const apiRouter = require('./routes/apiRouter');
 
 // initialize express server and declare a port for the server
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true })); // recognize incoming Request O
 app.use(express.static('../client/'));
 
 // direct to routers
-// app.use('/', loginRouter);
+app.use('/', loginRouter);
 // app.use('/api', apiRouter);
 
 // global 404 catch for bad route requests
