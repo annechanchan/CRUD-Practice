@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "username": username,
                 "password": password
             }),
-          })
+        })
             .then((res) => res.json())
             .then((data) => {
               console.log('Data: ', data)
