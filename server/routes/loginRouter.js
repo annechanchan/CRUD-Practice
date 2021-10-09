@@ -9,13 +9,6 @@ const router = express.Router();
 /* handle routes to '/' */
 
 // Before this callback we will add middleware
-router.get('/', (req, res) => { // This is the first page that a user will see.
-    return res // Before this callback we will add middleware
-        .status(200)
-        .setHeader('Content-Type', 'text/html')
-        // .sendFile(path.joinin(__dirname, '../../client/login.html'))
-
-});
 
 router.get('/login', (req, res) => { // This is the first page that a user will see.
   return res // Before this callback we will add middleware

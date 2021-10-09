@@ -24,6 +24,10 @@ loginController.checkUser = (req, res, next) => {
       });
     }
     res.locals.user = dbResponse.rows[0];
+    if (res.locals.user) {
+      res.locals.user.username.toString();
+      res.locals.user.password.toString();
+    }
     return next();
   })
 }
@@ -64,7 +68,7 @@ loginController.verifyUser = (req, res, next) => {
   if (!res.locals.user) {
       return next({
             log: 'ERROR: loginController.verifyUser',
-            message: { err: err.message }
+            message: { err: 'Verification failed' }
       });
   }
 

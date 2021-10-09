@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true })); // recognize incoming Request O
 // app.use(cookieParser());
 
 // serve static files
-app.use(express.static(path.resolve(__dirname, '../client/')));
+app.use(express.static(path.join(__dirname, '../client/')));
 
 // direct to routers
 app.use('/', loginRouter);
