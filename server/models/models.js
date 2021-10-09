@@ -14,7 +14,7 @@ module.exports = {
   }
 };
 
-//CREATE TABLE todo(
+//CREATE TABLE users(
 //   _id SERIAL PRIMARY KEY,
 //   username VARCHAR NOT NULL,
 //   password VARCHAR NOT NULL,
